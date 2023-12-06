@@ -1,0 +1,21 @@
+<?xml version='1.0'?>
+<eserler>
+    <eser>
+      <dcTitle>Bir</dcTitle>
+      <dcSubject>bir konu</dcSubject>
+      <dcCreator>bir yazar</dcCreator>
+      <dcDescription>bir açıklama</dcDescription>
+      <dcLanguage>TR</dcLanguage>
+      <dcIdentifier>http://www.madran.net</dcIdentifier>
+      <dcImage>img/bir.jpeg</dcImage>
+    </eser>
+      <eser>
+      <dcTitle>Bir</dcTitle>
+      <dcSubject>bir konu</dcSubject>
+      <dcCreator>bir yazar</dcCreator>
+      <dcDescription>bir açıklama</dcDescription>
+      <dcLanguage>TR</dcLanguage>
+      <dcIdentifier>http://www.madran.net</dcIdentifier>
+      <dcImage>img/bir.jpeg</dcImage>
+    </eser>
+ </eserler>
