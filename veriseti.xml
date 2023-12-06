@@ -1,21 +1,33 @@
 <?xml version='1.0'?>
 <eserler>
     <eser>
-      <dcTitle>Bir</dcTitle>
-      <dcSubject>bir konu</dcSubject>
-      <dcCreator>bir yazar</dcCreator>
-      <dcDescription>bir açıklama</dcDescription>
+      <dcTitle>Veri Bilimi İçin Python</dcTitle>
+      <dcCreator>Burak Özkan ve Yalçın özkan</dcCreator>
       <dcLanguage>TR</dcLanguage>
-      <dcIdentifier>http://www.madran.net</dcIdentifier>
       <dcImage>img/bir.jpeg</dcImage>
     </eser>
       <eser>
-      <dcTitle>Bir</dcTitle>
-      <dcSubject>bir konu</dcSubject>
-      <dcCreator>bir yazar</dcCreator>
-      <dcDescription>bir açıklama</dcDescription>
+      <dcTitle>Veri Bilimi İçin Python</dcTitle>
+      <dcCreator>Bülent Çobanoğlu</dcCreator>
       <dcLanguage>TR</dcLanguage>
-      <dcIdentifier>http://www.madran.net</dcIdentifier>
+      <dcImage>img/bir.jpeg</dcImage>
+    </eser>
+      <eser>
+      <dcTitle>Yapay Zekayı Kodlamak</dcTitle>
+      <dcCreator>Özel Sebetci</dcCreator>
+      <dcLanguage>TR</dcLanguage>
+      <dcImage>img/bir.jpeg</dcImage>
+    </eser>
+      <eser>
+      <dcTitle>Veri Biliminde Ustalaşmak</dcTitle>
+      <dcCreator>Mert Boz</dcCreator>
+      <dcLanguage>TR</dcLanguage>
+      <dcImage>img/bir.jpeg</dcImage>
+    </eser>
+      <eser>
+      <dcTitle>Veri Bilimi</dcTitle>
+      <dcCreator>Cem S. Sütçü ve Çiğdem Aytekin</dcCreator>
+      <dcLanguage>TR</dcLanguage>
       <dcImage>img/bir.jpeg</dcImage>
     </eser>
  </eserler>

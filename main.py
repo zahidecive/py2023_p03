@@ -30,10 +30,10 @@ def geriGit():
 tree = ET.parse('veriseti.xml')
 root = tree.getroot()
 
-def goster(navigasyon):
-    resim = root[navigasyon][1].text
-    icerik = root[navigasyon][0].text
-    print(root[navigasyon][0].text)
+#def goster(navigasyon):
+    #resim=root[navigasyon][1].text
+    #icerik=root[navigasyon][0].text
+    #print(root[navigasyon][0].text)
 
     gorsel = ImageTk.PhotoImage(Image.open(resim))
     cerceve = Label(image=gorsel)
