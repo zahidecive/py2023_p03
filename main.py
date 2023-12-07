@@ -3,10 +3,28 @@ import xml.etree.ElementTree as ET
 from PIL import ImageTk, Image
 
 pencere = Tk()
-pencere.title("XML Project")
-pencere.geometry("850x600")
+pencere.title("Resim Albümü")
+pencere.geometry('1050x950')
 
-navigasyon = 0
+baslik = Label(pencere, text="Veri Bilimi Kitapları")
+baslik.grid(row=0, column=0, padx= 10, pady=10)
+baslik.config(font=("Arial", 20))
+
+kapaklar = ["img/kitap_01.jpg", "img/kitap_02.jpg", "img/kitap_03.jpg", "img/kitap_04.jpg", "img/kitap_05.jpg"]
+
+kapak = 0
+
+def goster():
+    gorsel = ImageTk.PhotoImage(Image.open(kapaklar[kapak]))
+    cerceve = Label(image=gorsel)
+    cerceve.image = gorsel
+    cerceve.grid(row=1, column=0, padx= 10, pady=10)
+
+goster()
+
+metinLabel = Label(pencere, text="metin", wraplength=500)
+metinLabel.grid(row=2, column=0, padx=10, pady=10)
+metinLabel.config(font=('Arial',20))
 
 def navigasyon(direction):
     global kapak
@@ -15,40 +33,23 @@ def navigasyon(direction):
     elif direction == 'geri':
         kapak = (kapak-1)% len(kapaklar)
 
-        goster()
+    goster()
 
-def ileriGit():
-    global navigasyon
-    navigasyon +=1
-    goster(navigasyon)
-
-def geriGit():
-    global navigasyon
-    navigasyon -=1
-    goster(navigasyon)
+    metinLabel.config(text="Görüntülenen resim: " + kapaklar[kapak])
 
 tree = ET.parse('veriseti.xml')
-root = tree.getroot()
+root = tree.getroot() 
 
-#def goster(navigasyon):
-    #resim=root[navigasyon][1].text
-    #icerik=root[navigasyon][0].text
-    #print(root[navigasyon][0].text)
 
-    gorsel = ImageTk.PhotoImage(Image.open(resim))
-    cerceve = Label(image=gorsel)
-    cerceve.image = gorsel
-    cerceve.grid(row=3, columnspan=2, padx= 10, pady=10)
+ileriButon = Button(pencere,text= 'İleri', command=lambda: navigasyon('ileri'))
+geriButon = Button(pencere,text= 'Geri', command=lambda: navigasyon('geri'))
 
-    metin = Label(pencere, text=icerik)
-    metin.grid(row=2, columnspan=2, padx= 10, pady=10)
 
-ileriButon = Button(pencere, text="İleri", command=ileriGit)
-geriButon = Button(pencere, text="Geri", command=geriGit)
+buton = Button(text= 'Diğer Kitapları', command=lambda: navigasyon('ileri'))
+buton.grid(row=2, column=0, padx=10, pady=10)
+buton.config(font=('Arial',20))
+ileriButon.grid(row=1, column=1, padx=0, pady=10)
+geriButon.grid(row=1, column=2, padx=100, pady=100)
 
-ileriButon.grid(row=1, column=1, padx= 10, pady=10)
-geriButon.grid(row=1, column=0, padx= 10, pady=10)
-
-goster(navigasyon)
 
 pencere.mainloop()
