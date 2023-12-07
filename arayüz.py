@@ -21,6 +21,10 @@ def goster():
 
 goster()
 
+metinLabel = Label(pencere, text="Metin", wraplength=400)
+metinLabel.grid(row=2, column=0, padx=10, pady=10)
+metinLabel.config(font=('Arial',20))
+
 def navigasyon(direction):
     global kapak
     if direction == 'ileri':
@@ -29,6 +33,9 @@ def navigasyon(direction):
         kapak = (kapak-1)% len(kapaklar)
 
     goster()
+
+metinLabel.config(text="Görüntülenen resim: " + kapaklar[kapak])
+
 
 ileriButon = Button(pencere,text= 'İleri', command=lambda: navigasyon('ileri'))
 geriButon = Button(pencere,text= 'Geri', command=lambda: navigasyon('geri'))
